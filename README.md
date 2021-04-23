@@ -12,4 +12,10 @@ The arduino is not directly shown but it controls the relay using `Digital Out`,
 ## Relay
 The relay controls the voltage to the load. In between the relay control pins and the Arduino digital out pins there is a 100 uF capacitor in parallel with a 1k Ohm resistor in order to smooth the control signal. WIthout the capacitor and resistor the arduino would frequently crash at high switching frequencies. This is likely caused by the relay inductance giving feedback back to the Arduino pins which the Arduino could not withstand.
 ## Load
+The load consists of a load component and a 800 uF capacitor for smoothing. The voltage across the load is monitored by an Arduino.
+
 # Real World Performance
+Below is shown the performance of the step down converter with a resistive load.
+![Graph](graph.png)
+Below is shown the real circuit for reference.
+![](image.JPG)
